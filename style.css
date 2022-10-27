@@ -24,6 +24,7 @@ body {
     text-align: center;
     padding: 14px 25px;
     text-decoration: none;
+    transition: 0.3s;
 }
   
 .dropdown {
@@ -40,6 +41,7 @@ body {
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+    transition: 0.3s;
 }
   
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -112,12 +114,12 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 12vw;
-    margin: 0.5em;
 }
   
 .video-header h2 {
     color: rgb(218, 218, 218);
     font-size: 3vw;
+    padding: 2vw 0 2vw 0;
 }
 
 .video-header p {
@@ -145,9 +147,16 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.253401025236593) 50%, rgba(0,0,0,1) 100%);
     z-index: 0;
+}
+
+.lighter-grad::before {
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%);
+}
+
+.darken-select:hover::before {
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7539390756302521) 50%, rgba(0,0,0,1) 100%);
 }
 
 .container-child h2 {
@@ -175,6 +184,12 @@ body {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.no-bg {
+    display: block;
+    width: 100%;
+    height: 18vw;
 }
 
 .left-align {
@@ -205,6 +220,7 @@ body {
 
 .caption a {
     text-decoration: none;
+    transition: 0.3s;
     color:rgb(218, 218, 218);
 }
 
@@ -232,4 +248,32 @@ body {
     padding: 1em;
     color: rgb(218, 218, 218);
     background-color: #333;
+}
+
+@media only screen and (max-width: 960px) {
+    .navbar {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .navbar a {
+        margin: 0;
+    }
+
+    .left-align, .right-align {
+        text-align: center;
+    }
+
+    .container-child p {
+        font-size: 1.25em;
+    }
+
+    .container-child img {
+        height: 1100px;
+    }
+
+    .horizontal-container-height img {
+        height: 100%;
+    }
 }
