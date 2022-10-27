@@ -265,15 +265,53 @@ body {
         text-align: center;
     }
 
+    .container-child h2 {
+        font-size: 6vw;
+    }
+
+    .container-child h3 {
+        font-size: 5vw;
+    }
+
     .container-child p {
-        font-size: 1.25em;
+        font-size: 4vw;
     }
 
     .container-child img {
-        height: 1100px;
+        height: 230vw;
+    }
+
+    .darken-select:before {
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7539390756302521) 50%, rgba(0,0,0,1) 100%);
+    }
+
+    .horizontal-container {
+        flex-direction: column;
     }
 
     .horizontal-container-height img {
-        height: 100%;
+        height: 150vw;
+    }
+
+    .container-child .lighter-grad .horizontal-container-height {
+        position: relative;
+    }
+
+    .top-caption {
+        text-align: center;
+        width: 100%;
+        top: auto;
+        bottom: 5vw;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .bottom-caption {
+        text-align: center;
+        width: 100%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
     }
 }
