@@ -2,6 +2,10 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -250,7 +254,7 @@ body {
     background-color: #333;
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 600px) {
     .navbar {
         display: flex;
         justify-content: center;
@@ -270,7 +274,7 @@ body {
     }
 
     .container-child h3 {
-        font-size: 5vw;
+        font-size: 4vw;
     }
 
     .container-child p {
@@ -290,11 +294,15 @@ body {
     }
 
     .horizontal-container-height img {
-        height: 150vw;
+        height: 120vw;
     }
 
     .container-child .lighter-grad .horizontal-container-height {
         position: relative;
+    }
+
+    .caption {
+        top: 8vw;
     }
 
     .top-caption {
