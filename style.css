@@ -79,6 +79,10 @@ body {
     display: block;
 }
 
+.icon {
+    height: 1.3em;
+}
+
 .video-header {
     position: relative;
     display: flex;
