@@ -13,9 +13,10 @@ body {
 }
 
 .navbar {
+    display: block;
     overflow: hidden;
-    background-color: #333;
     margin: 0 auto;
+    background-color: #111;
 }
   
 .navbar a {
@@ -46,6 +47,7 @@ body {
     font-family: inherit;
     margin: 0;
     transition: 0.3s;
+    cursor: pointer;
 }
   
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -77,6 +79,105 @@ body {
   
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.nav-right {
+    float: right;
+}
+
+.sidebar {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 40px;
+    z-index: 200;
+}
+  
+.sidebar a {
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: left;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar .dropbtn {
+    font-size: 20px;
+}
+  
+.sidebar a:hover {
+    color: #ddd;
+}
+
+.sidebar .dropdown-content a:hover {
+    color: #111;
+}
+  
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+.openbtn {
+    font-size: 40px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    z-index: 100;
+    background-color: inherit;
+    color: #ddd;
+    float: left;
+    transition: 0.3s;
+}
+  
+.openbtn:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.sidebar .nav-right {
+    left: 18px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar-nav {
+    margin: 0 auto;
+    display: none;
+    position: -webkit-sticky;
+    position: sticky;
+    flex-direction: row;
+    overflow: hidden;
+    top: 0;
+    width: 100vw;
+    height: 75px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+    z-index: 100;
+}
+
+#section-title {
+    float: right;
+    justify-content: right;
+    color: #ddd;
+    font-size: 30px;
+    padding: 22px;
+    padding-right: 40px;
+    margin-left: auto;
 }
 
 .icon {
@@ -258,11 +359,46 @@ body {
     background-color: #333;
 }
 
-@media only screen and (max-width: 600px) {
-    .navbar {
+@media only screen and (max-width: 800px) {
+    .sidebar {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+    }
+
+    .sidebar-nav {
+        display: flex;
+    }
+
+    .navbar {
+        display: none;
+        position: fixed;
+        left: 0;
+        flex-direction: column;
+        width: 195px;
+        z-index: 200;
+        height: 100%;
+        background-color: black;
+    }
+
+    .navbar a {
+        justify-content: left;
+        padding: 14px 10px;
+        font-size: 16px;
+    }
+
+    .dropdown .dropbtn {
+        width: 100%;
+        text-align: left;
+        font-size: 20px;
+        padding: 15px 15px;
+    }
+
+    .nav-right {
+        position: absolute;
+        bottom: 0px;
+    }
+
+    .nav-right a {
+        padding: 14px 20px;
     }
 
     .navbar a {

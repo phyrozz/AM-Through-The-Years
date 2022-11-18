@@ -3,13 +3,47 @@
     <head>
         <title>Arctic Monkeys Through the Years</title>
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="jquery.js"></script>
     </head>
     <body>
-        <div class="navbar">
-            <a href="https://arcticmonkeys.ffm.to/sp"><img class="icon" src="assets/spo.png"></a>
-            <a href="https://arcticmonkeys.ffm.to/am"><img class="icon" src="assets/apple.webp"></a>
-            <a href="https://arcticmonkeys.ffm.to/yt"><img class="icon" src="assets/yt.webp"></a>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <div class="dropdown">
+                <button class="dropbtn">Albums  
+                  </button>
+                  <div class="dropdown-content" id="dropdown-content">
+                    <a href="https://en.wikipedia.org/wiki/Whatever_People_Say_I_Am,_That%27s_What_I%27m_Not">Whatever People Say I Am, That's What I'm Not</a>
+                    <a href="https://en.wikipedia.org/wiki/Favourite_Worst_Nightmare">Favourite Worst Nightmare</a>
+                    <a href="https://en.wikipedia.org/wiki/Humbug_(album)">Humbug</a>
+                    <a href="https://en.wikipedia.org/wiki/Suck_It_and_See">Suck It And See</a>
+                    <a href="https://en.wikipedia.org/wiki/AM_(Arctic_Monkeys_album)">AM</a>
+                    <a href="https://en.wikipedia.org/wiki/Tranquility_Base_Hotel_%26_Casino">Tranquility Base Hotel + Casino</a>
+                    <a href="https://en.wikipedia.org/wiki/The_Car_(album)">The Car</a>
+                  </div>
+            </div>
+            <a href="#beginnings">2002 - 2005</a>
+            <a href="#2006">2006</a>
+            <a href="#2007">2007</a>
+            <a href="#2009">2009</a>
+            <a href="#2011">2011</a>
+            <a href="#2013">2013</a>
+            <a href="#2018">2018</a>
+            <a href="#2022">2022</a>
+            <div class="nav-right">
+                <a href="https://arcticmonkeys.ffm.to/sp"><img class="icon" src="assets/spo.png"></a>
+                <a href="https://arcticmonkeys.ffm.to/am"><img class="icon" src="assets/apple.webp"></a>
+                <a href="https://arcticmonkeys.ffm.to/yt"><img class="icon" src="assets/yt.webp"></a>
+            </div>
+        </div>
+        <div class="sidebar-nav">
+            <button class="openbtn" onclick="openNav()">☰</button>
+            <div id="section-title">Welcome</div>
+        </div>
+        <div class="navbar" id="navbar">
             <div class="dropdown">
                 <button class="dropbtn">Albums  
                     <i class="fa fa-caret-down"></i>
@@ -24,17 +58,7 @@
                     <a href="https://en.wikipedia.org/wiki/The_Car_(album)">The Car</a>
                   </div>
             </div>
-            <!-- <div class="dropdown">
-                <button class="dropbtn">Stream  
-                    <i class="fa fa-caret-down"></i>
-                  </button>
-                  <div class="dropdown-content">
-                    <a href="https://arcticmonkeys.ffm.to/sp">Spotify</a>
-                    <a href="https://arcticmonkeys.ffm.to/am">Apple Music</a>
-                    <a href="https://arcticmonkeys.ffm.to/yt">Youtube</a>
-                  </div>
-            </div> -->
-            <a href="#2002 - 2005">2002 - 2005</a>
+            <a href="#beginnings">2002 - 2005</a>
             <a href="#2006">2006</a>
             <a href="#2007">2007</a>
             <a href="#2009">2009</a>
@@ -42,6 +66,11 @@
             <a href="#2013">2013</a>
             <a href="#2018">2018</a>
             <a href="#2022">2022</a>
+            <div class="nav-right">
+                <a href="https://arcticmonkeys.ffm.to/sp"><img class="icon" src="assets/spo.png"></a>
+                <a href="https://arcticmonkeys.ffm.to/am"><img class="icon" src="assets/apple.webp"></a>
+                <a href="https://arcticmonkeys.ffm.to/yt"><img class="icon" src="assets/yt.webp"></a>
+            </div>
         </div>
         <div class="video-header">
             <video autoplay muted loop>
@@ -55,23 +84,23 @@
         <div class="container">
             <div class="container-child darken-select">
                 <div class="caption right-align">
-                    <h2>Who The F**k Are Arctic Monkeys?</h2>
-                    <p class="left-align">Formed in 2002 in the humble city of Sheffield in South Yorkshire, England. Arctic Monkeys started off as a popular band among local gigs. After releasing their debut EP "Five Minutes with Arctic Monkeys", they've landed a major record label deal with Domino Records.</p>
-                    <p class="left-align">By the time they've released their debut album "Whatever People Say I Am, That's What I'm Not" in 2006, they were already popular among English garage rock scene, with the album being the fastest-selling debut album in the entire UK chart's history.
+                    <h2 data-aos="fade-right">Who The F**k Are Arctic Monkeys?</h2>
+                    <p class="left-align" data-aos="fade-right">Formed in 2002 in the humble city of Sheffield in South Yorkshire, England. Arctic Monkeys started off as a popular band among local gigs. After releasing their debut EP "Five Minutes with Arctic Monkeys", they've landed a major record label deal with Domino Records.</p>
+                    <p class="left-align" data-aos="fade-right">By the time they've released their debut album "Whatever People Say I Am, That's What I'm Not" in 2006, they were already popular among English garage rock scene, with the album being the fastest-selling debut album in the entire UK chart's history.
                     </p>
-                    <p class="center-align">Scroll down to learn more about them.</p>
+                    <p class="center-align" data-aos="fade-up">Scroll down to learn more about them.</p>
                 </div>
                 <img src="assets/who.jpg" />
             </div>
         </div>
         <div class="container">
-            <div class="container-child no-bg">
+            <div class="container-child no-bg" id="band-members-header">
                 <div class="caption">
-                    <h4 class="center-align">Meet the Band Members</h4>
+                    <h4 class="center-align" data-aos="fade-in">Meet the Band Members</h4>
                 </div>
             </div>
         </div>
-        <div class="horizontal-container">
+        <div class="horizontal-container" id="band-members" data-aos="fade-up">
             <div class="container-child lighter-grad horizontal-container-height">
                 <p class="top-caption">Vocals</p>
                 <p class="bottom-caption"><b>Alex Turner</b></p>
@@ -99,9 +128,9 @@
             </div>
         </div>
         <div class="container">
-            <div class="container-child darken-select" id="2002 - 2005">
+            <div class="container-child darken-select" id="beginnings" data-aos="fade-down">
                 <div class="caption">
-                    <h3 class="right-align">2002 - 2005</h3>
+                    <h3 class="right-align" data-aos="fade-right">2002 - 2005</h3>
                     <h2 class="right-align">The Beginnings</h2>
                     <p class="right-align">The Arctic Monkeys were formed in mid-2002 by friends Alex Turner, Matt Helders, and Andy Nicholson. The name "Arctic Monkeys" was Cook's idea, and is perhaps a play on "northern monkey", a derogatory term for someone from northern England.</p>
                     <p class="right-align">The band began to grow in popularity across the north of England, receiving attention from BBC Radio and the British tabloid press. When asked about the popularity of the band's MySpace site, the band said that they were unaware of what it was and that the site had originally been created by their fans. In May 2005, Arctic Monkeys released the EP Five Minutes with Arctic Monkeys on their own 'Bang Bang' label, featuring the songs "Fake Tales of San Francisco" and "From the Ritz to the Rubble".</p>
@@ -109,9 +138,9 @@
                 </div>
                 <img src="assets/beginnings.jpg" />
             </div>
-            <div class="container-child darken-select" id="2006">
+            <div class="container-child darken-select" id="2006" data-aos="fade-down">
                 <div class="caption">
-                    <h3 class="left-align">2006</h3>
+                    <h3 class="left-align" data-aos="fade-left">2006</h3>
                     <h2 class="left-align">Whatever People Say I Am, That's What I'm Not</h2>
                     <p class="left-align">The band finished recording their debut album, Whatever People Say I Am, That's What I'm Not, at Chapel Studios in Lincolnshire in September 2005 with British record producer Jim Abbiss producing. Whatever People Say I Am, That's What I'm Not became the fastest-selling debut album in UK chart history, selling 363,735 copies in the first week. This surpassed the previous record of 306,631 copies held by Popstars by Hear'Say, and sold more copies on its first day alone – 118,501 – than the rest of the Top 20 albums combined.</p>
                     <p class="left-align">The cover sleeve of Whatever People Say I Am, That's What I'm Not, showing Chris McClure, a friend of the band smoking a cigarette, was criticised by the head of the NHS in Scotland for "reinforcing the idea that smoking is okay". The image on the CD itself is a shot of an ashtray full of cigarettes. The band's product manager denied the accusation, and suggested the opposite – "You can see from the image smoking is not doing him the world of good."</p>
@@ -119,9 +148,9 @@
                 </div>
                 <img src="assets/wpsiatwin.jpg" />
             </div>
-            <div class="container-child darken-select" id="2007">
+            <div class="container-child darken-select" id="2007" data-aos="fade-down">
                 <div class="caption">
-                    <h3 class="right-align">2007</h3>
+                    <h3 class="right-align" data-aos="fade-right">2007</h3>
                     <h2 class="right-align">Favourite Worst Nightmare</h2>
                     <p class="right-align">The band's second album, Favourite Worst Nightmare, was released on 23 April 2007, a week after the release of accompanying single "Brianstorm". Like its predecessor, Favourite Worst Nightmare also quickly reached No. 1 in the album charts. Turner described the songs as "very different from last time", adding that the sound of some tracks are "a bit full-on – a bit like "From the Ritz to the Rubble", "The View from the Afternoon", that sort of thing".</p>
                     <p class="right-align">Meanwhile, the band continued to pick up awards from around the world, namely the Best New Artist in the United States at the PLUG Independent Music Awards, the Album of the Year awards in Japan, Ireland and the US, awards for Best Album and Best Music DVD for the short film Scummy Man at the 2007 NME Awards. It ended the year by clinching the Best British Band and Best British Album at the 2008 BRIT Awards. For the second year in a row, the band was nominated for the annual Mercury Prize.</p>
@@ -130,9 +159,9 @@
                 </div>
                 <img src="assets/fwn.jpg" />
             </div>
-            <div class="container-child darken-select" id="2009">
+            <div class="container-child darken-select" id="2009" data-aos="fade-down">
                 <div class="caption">
-                    <h3 class="left-align">2009</h3>
+                    <h3 class="left-align" data-aos="fade-left">2009</h3>
                     <h2 class="left-align">Humbug</h2>
                     <p class="left-align">After a brief hiatus during which Turner toured and recorded with his side project the Last Shadow Puppets, the band recorded half the album at Rancho De La Luna recording sessions with Josh Homme of Queens of the Stone Age in early autumn, 2008, and half in the New York sessions with James Ford in spring, 2009, following their January tour of New Zealand and Australia. During this tour, lead single "Crying Lightning", along with Humbug songs "Pretty Visitors", "Dangerous Animals", and "Potion Approaching" (then known as "Go-Kart"), was debuted live.</p>
                     <p class="left-align">In a preview article on Clash, Turner revealed that the band had listened to Nick Cave, Jimi Hendrix and Cream while writing the new album, the title of which would be Humbug. Humbug was released on 19 August 2009, and, like both of its predecessors, the album went straight to No. 1.</p>
@@ -141,9 +170,9 @@
                 </div>
                 <img src="assets/humbug.jpg" />
             </div>
-            <div class="container-child darken-select" id="2011">
+            <div class="container-child darken-select" id="2011" data-aos="fade-down">
                 <div class="caption">
-                    <h3 class="right-align">2011</h3>
+                    <h3 class="right-align" data-aos="fade-right">2011</h3>
                     <h2 class="right-align">Suck It And See</h2>
                     <p class="right-align">NME reported in May 2011 that the band were teaming up with producer James Ford once again, and would be releasing their fourth studio album in late spring at the earliest. Q magazine reported that the fourth Arctic Monkeys album would be of a "more accessible vintage" than Humbug. Q printed edition 299 states "It's the sound of a band drawing back the curtains and letting the sunshine in".</p>
                     <p class="right-align">The album was recorded in Sound City Studios in Los Angeles in 2010 and 2011. On 4 March 2011, the band premièred on its website a new track called "Brick by Brick" with lead vocals by Matt Helders. Helders explained that this is not a single, just a tease of what is coming and that is it is going to be on the fourth album. On 10 March 2011 the band revealed the album is to be called Suck It and See and was released on 6 June 2011.</p>
@@ -152,9 +181,9 @@
                 </div>
                 <img src="assets/suck-it-and-see.jpg" />
             </div>
-            <div class="container-child darken-select" id="2013">
+            <div class="container-child darken-select" id="2013" data-aos="fade-down">
                 <div class="caption">
-                    <h3 class="left-align">2013</h3>
+                    <h3 class="left-align" data-aos="fade-left">2013</h3>
                     <h2 class="left-align">AM</h2>
                     <p class="left-align">On 26 February 2012, the band released a new song titled "R U Mine?" on their YouTube channel. On 4 March, it went to No. 23 on the UK Singles Chart on downloads alone. On 21 April, the song was released as a single, with the track "Electricity" as a B-side, released additionally for Record Store Day.</p>
                     <p class="left-align">The band's fifth studio album, AM, was released on 9 September 2013. The album was recorded in Rancho de la Luna in Joshua Tree, California, and features guest appearances from Josh Homme of Queens of the Stone Age, Elvis Costello's drummer Pete Thomas and Bill Ryder-Jones of the Coral.</p>
@@ -164,9 +193,9 @@
                 </div>
                 <img src="assets/am.jpg" />
             </div>
-            <div class="container-child darken-select" id="2018">
+            <div class="container-child darken-select" id="2018" data-aos="fade-down">
                 <div class="caption">
-                    <h3 class="right-align">2018</h3>
+                    <h3 class="right-align" data-aos="fade-right">2018</h3>
                     <h2 class="right-align">Tranquility Base Hotel + Casino</h2>
                     <p class="right-align">In December 2016, Turner confirmed to BBC Radio Sheffield that the band's hiatus had ended and work had begun on their sixth studio album. The album had begun recording in September 2017. The album, Tranquility Base Hotel & Casino was released on 11 May 2018.</p>
                     <p class="right-align">Despite its stylistic deviation polarising listeners, Tranquility Base Hotel & Casino was released to generally positive reviews. It became the band's sixth consecutive number-one debut in the UK, and the country's fastest-selling vinyl record in 25 years. Following its release, the album was promoted by the singles "Four Out of Five" and "Tranquility Base Hotel & Casino", multiple television appearances, as well as a global tour in which they played their biggest show todate with 64,467 attandance at the Foro Sol Stadium in Mexico City.</p>
@@ -175,9 +204,9 @@
                 </div>
                 <img src="assets/tranquility-base.jpg" />
             </div>
-            <div class="container-child darken-select" id="2022">
+            <div class="container-child darken-select" id="2022" data-aos="fade-down">
                 <div class="caption">
-                    <h3 class="left-align">2022</h3>
+                    <h3 class="left-align" data-aos="fade-left">2022</h3>
                     <h2 class="left-align">The Car</h2>
                     <p class="left-align">On 8 December 2021, the band was announced as the Saturday co-headliner of the 2022 Reading and Leeds Festival, alongside Bring Me the Horizon, Megan Thee Stallion, Rage Against the Machine and Halsey. On 23 August 2022 at the Zurich Openair festival, they debuted new song "I Ain't Quite Where I Think I Am". The following day they announced their seventh studio album, The Car, which was released on 21 October 2022. On 30 August 2022, they released the first single from the album, "There'd Better Be a Mirrorball", accompanied by a video directed by Turner. "I Ain't Quite Where I Think I Am" was released as the third single on 18 October 2022.</p>
                     <p class="left-align">The Car has received critical acclaim. At Metacritic, which assigns a normalised rating out of 100 to reviews from mainstream publications, the album received a score of 82, based on 23 reviews, indicating "universal acclaim. Thomas Smith of NME thought the album best summarized the story of the band, "sharp songwriting, relentless innovation and unbreakable teamwork", adding that it would be a rewarding listen for old fans, as well as, a remarkable starting point for new ones. Ludovic Hunter-Tilney of Financial Times thought the band "doubled down on the stylistic swerve that they made on Tranquility Base Hotel & Casino" but was more positive to this record, saying "unlike its predecessor, the results do not exhaust or disappoint." Mark Beaumont of The Independent also compared the lyricism of both albums, describing it, as "roaring off in every direction, as wonderfully imaginistic as it is largely impenetrable", unlike, "the sci-fi framework" of the previous record.</p>
@@ -187,7 +216,7 @@
             </div>
             <div class="container">
                 <div class="container-child no-bg">
-                    <div class="caption">
+                    <div class="caption" data-aos="fade-down">
                         <a href="#"><p class="center-align">Return to top</p></a>
                     </div>
                 </div>
@@ -198,5 +227,11 @@
             <p>BSIT 3-1 - Polytechnic University of the Philippines - Santa Rosa</p>
             <p>Group Members: Joshua Malabanan, Gio Coronel, Karlos Catap</p>
         </div>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000
+            });
+        </script>
     </body>
 </html>
