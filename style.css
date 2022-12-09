@@ -294,6 +294,7 @@ body {
     width: 100%;
     position: relative;
     color:rgb(218, 218, 218);
+    margin: 5vw 0 5vw 0;
 }
 
 .container-child:before {
@@ -341,6 +342,23 @@ body {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.link-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2vw;
+    height: 10vw;
+}
+
+.link-container img {
+    height: 5vw;
+}
+
+.link-container a:hover {
+    transform: scale(1.2);
 }
 
 .no-bg {
@@ -465,6 +483,14 @@ body {
         right: 50%;
         transform: translate(-50%, -50%);
     }
+
+    .link-container {
+        margin: 10vw 0 10vw 0;
+    }
+
+    .link-container img {
+        height: 8vw;
+    }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -511,5 +537,13 @@ body {
 
     .navbar a {
         margin: 0;
+    }
+
+    .link-container {
+        padding: 1vw;
+    }
+
+    .link-container img {
+        height: 5vw;
     }
 }
